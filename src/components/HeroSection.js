@@ -71,13 +71,54 @@ function Hero() {
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ type: 'spring', stiffness: 70, delay: 0.6 }}
+        style={{ position: 'relative', display: 'inline-block' }}
       >
-        <img
+        <motion.img
           src={option3Image}
           alt="Favour Gilian"
           className="hero-image"
+          animate={{
+            scale: [1, 1.05, 1],
+            rotate: [0, 2, -2, 0]
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          style={{ borderRadius: '20px', boxShadow: '0 10px 25px rgba(0,0,0,0.2)' }}
         />
+
+        <motion.div
+        style={{
+          position: 'absolute',
+          top: '-20px',
+          right: '-20px',
+          width: '40px',
+          height: '40px',
+          borderRadius: '50%',
+          background: '#b497bd'
+        }}
+        animate={{ y: [0, -20, 0] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        style={{
+          position: 'absolute',
+          bottom: '-20px',
+          left: '-20px',
+          width: '50px',
+          height: '50px',
+          borderRadius: '50%',
+          background: '#7e5e8f'
+        }}
+        animate={{ x: [0, 15, 0] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+      />
       </motion.div>
+
+      
 
       {/* Floating shapes */}
       <div className="floating-shapes" aria-hidden="true">
