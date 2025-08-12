@@ -86,7 +86,7 @@ function Hero() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          style={{ borderRadius: '20px', boxShadow: '0 10px 25px rgba(0,0,0,0.2)' }}
+          style={{ borderRadius: '20px', boxShadow: '0 10px 25px rgba(197, 153, 232, 0.8)' }}
         />
 
         <motion.div

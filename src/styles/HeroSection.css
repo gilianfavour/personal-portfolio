@@ -1,6 +1,6 @@
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 60vh;
   background-color: #fff;
   color: #000;
   display: flex;
@@ -71,7 +71,7 @@
 
 .hero-image {
   width: auto;
-  max-height: 80vh;
+  max-height: 60vh;
   border-radius: 14px;
   box-shadow: 0 12px 30px rgba(180, 140, 180, 0.4);
   object-fit: cover;
