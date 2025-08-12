@@ -1,0 +1,21 @@
+.skills-section {
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.skill-bar {
+  width: 100%;
+}
+
+.skill-header span {
+  font-size: 1.1rem;
+}
+
+.skill-progress {
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+

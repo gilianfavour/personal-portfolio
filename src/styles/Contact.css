@@ -1,0 +1,29 @@
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #b497bd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: #7e5e8f;
+  box-shadow: 0 0 8px #b497bdaa;
+}
+
+.social-link {
+  color: inherit;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover,
+.social-link:focus {
+  color: #b497bd;
+  transform: scale(1.2);
+}

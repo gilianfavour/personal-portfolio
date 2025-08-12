@@ -1,0 +1,26 @@
+.projects-section {
+  min-height: 80vh;
+  background: linear-gradient(to bottom, #f5f3f7 0%, #ebe5f0 50%, #f2e7fa 100%);
+  padding-top: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.btn-outline-lavender {
+  border-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-lavender:hover,
+.btn-outline-lavender:focus {
+  background-color: #b497bd;
+  color: white;
+  border-color: #b497bd;
+  box-shadow: 0 0 15px #b497bdaa;
+}

@@ -1,0 +1,242 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 6vw;
+  overflow: hidden;
+}
+
+.hero-text {
+  max-width: 45%;
+  text-align: left;
+  z-index: 2;
+}
+
+.hero-name {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.hero-tagline {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  line-height: 1.3;
+}
+
+.lavender-text {
+  color: #b497bd;
+}
+
+.hero-buttons {
+  display: flex !important;
+  gap: 1.5rem !important;
+}
+
+.hero-btn {
+  background-color: #b497bd !important;
+  border: none;
+  padding: 0.85rem 3rem;
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: #7e5e8f;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 15px #b497bdaa;
+}
+
+.hero-image-wrapper {
+  max-width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.hero-image {
+  width: auto;
+  max-height: 80vh;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(180, 140, 180, 0.4);
+  object-fit: cover;
+  user-select: none;
+}
+
+/* Floating shapes container */
+.floating-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 1;
+}
+
+/* Individual floating shapes */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background:  rgba(185, 152, 194, 0.4); /* lavender with transparency */
+  filter: blur(10px);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.shape1 {
+  width: 180px;
+  height: 180px;
+  top: 10%;
+  left: 5%;
+  animation-name: float1;
+  animation-duration: 12s;
+}
+
+.shape2 {
+  width: 140px;
+  height: 140px;
+  top: 50%;
+  left: 15%;
+  animation-name: float2;
+  animation-duration: 10s;
+  animation-delay: 3s;
+}
+
+.shape3 {
+  width: 220px;
+  height: 220px;
+  top: 30%;
+  right: 10%;
+  animation-name: float3;
+  animation-duration: 14s;
+  animation-delay: 1.5s;
+}
+
+.shape4 {
+  width: 100px;
+  height: 100px;
+  bottom: 10%;
+  right: 20%;
+  animation-name: float4;
+  animation-duration: 11s;
+  animation-delay: 4.5s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-25px) translateX(15px);
+  }
+}
+
+@keyframes float1 {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(15px, -20px) scale(1.05) rotate(15deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-10px, 25px) scale(0.95) rotate(-12deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes float3 {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-20px, 15px) scale(1.1) rotate(20deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes float4 {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(10px, -10px) scale(0.9) rotate(-10deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+.hero-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.wave-svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 3rem 2rem;
+  }
+  .hero-text,
+  .hero-image-wrapper {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero-image-wrapper {
+    margin-top: 2.5rem;
+    justify-content: center;
+  }
+  .hero-name {
+    font-size: 3.5rem;
+  }
+  .hero-tagline {
+    font-size: 1.5rem;
+  }
+  .hero-btn {
+    font-size: 1.1rem;
+    padding: 0.7rem 2.5rem;
+  }
+}
