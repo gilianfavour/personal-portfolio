@@ -19,8 +19,7 @@ const projects = [
     title: 'Resturant Website For Barolls Arua Limited',
     description: 'A fully functional fast food website with order and delivery intergration. Both the front and backend.',
     image: Barolls,
-    Link: 'https://www.barollsltd.com/',
-    url: 'https://github.com/gilianfavour/Barolls-Front-End.git',
+    url: 'https://www.barollsltd.com/',
     techStack: ['React', 'Node.js', 'BootStrap', 'Python(Flask)', 'MySQL', 'HTML', 'CSS'],
   },
   {
