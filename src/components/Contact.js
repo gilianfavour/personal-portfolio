@@ -1,78 +1,63 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { FaLinkedin, FaWhatsapp, FaGithub, FaTwitter, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
-    
-    // Prepare form data for Formspree
+    setError("");
+
     const data = new FormData();
-    data.append('name', formData.name);
-    data.append('email', formData.email);
-    data.append('message', formData.message);
+    data.append("name", formData.name);
+    data.append("email", formData.email);
+    data.append("message", formData.message);
 
     try {
-      const response = await fetch('https://formspree.io/f/mkgzyope', {
-        method: 'POST',
+      const response = await fetch("https://formspree.io/f/mkgzyope", {
+        method: "POST",
         headers: {
-          'Accept': 'application/json',
+          Accept: "application/json",
         },
         body: data,
       });
 
       if (response.ok) {
         setSubmitted(true);
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: "", email: "", message: "" });
       } else {
         const resData = await response.json();
-        setError(resData.error || 'Oops! Something went wrong.');
+        setError(resData.error || "Oops! Something went wrong.");
       }
     } catch (err) {
-      setError('Oops! Something went wrong.');
+      setError("Oops! Something went wrong.");
     }
   };
 
   return (
-    <section id="contact" className="contact-section" style={{ backgroundColor: '#f7f4fb', padding: '5rem 6vw', position: 'relative' }}>
-      <motion.div
-        className="projects-top-divider"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', overflow: 'hidden', lineHeight: 0, zIndex: 2 }}
-      >
-        <svg
-          viewBox="0 0 1440 150"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          style={{ display: 'block', width: '100%', height: '75px' }}
-        >
-          <path
-            fill="#b497bd"
-            fillOpacity="0.8"
-            d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,138.7C672,128,768,128,864,117.3C960,107,1056,85,1152,69.3C1248,53,1344,43,1392,37.3L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-          />
-        </svg>
-      </motion.div>
-
+    <section
+      id="contact"
+      style={{
+        backgroundColor: "#f7f4fb",
+        padding: "5rem 6vw",
+        position: "relative",
+      }}
+    >
       <motion.h2
         className="section-title text-center mb-5"
-        style={{ color: '#7e5e8f' }}
+        style={{ color: "#7e5e8f", fontSize: "2.2rem", fontWeight: "600" }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -83,83 +68,207 @@ function Contact() {
 
       <motion.div
         className="contact-container"
-        style={{ maxWidth: '600px', margin: '0 auto' }}
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          gap: "2rem",
+          maxWidth: "1000px",
+          margin: "0 auto",
+        }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.3 }}
       >
+        {/* LEFT: Contact Info */}
+        <div
+          style={{
+            flex: "1 1 40%",
+            background: "#fff",
+            padding: "2rem",
+            borderRadius: "12px",
+            boxShadow: "0 6px 15px rgba(0,0,0,0.08)",
+          }}
+        >
+          <h3 style={{ color: "#7e5e8f", marginBottom: "1.5rem" }}>
+            Contact Info
+          </h3>
+
+          <p style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <FaEnvelope color="#b497bd" /> gilianfavour06@gmail.com
+          </p>
+          <p style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <FaPhoneAlt color="#b497bd" /> +256 780488850
+          </p>
+          <p style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <FaMapMarkerAlt color="#b497bd" /> Arua, Uganda
+          </p>
+
+          <div
+            style={{
+              marginTop: "2rem",
+              display: "flex",
+              gap: "1.2rem",
+              fontSize: "1.6rem",
+              color: "#7e5e8f",
+            }}
+          >
+            <a
+            href="https://www.linkedin.com/in/favour-gilian-8084b3336/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#7e5e8f" }}
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/gilianfavour"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#7e5e8f" }}
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://x.com/favour22551"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#7e5e8f" }}
+          >
+            <FaTwitter />
+          </a>
+          <a
+            href="https://wa.me/256780488850" // replace with your WhatsApp number
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#7e5e8f" }}
+          >
+            <FaWhatsapp />
+          </a>
+          </div>
+        </div>
+
+        {/* RIGHT: Contact Form */}
+        
+        <div
+          style={{
+          flex: "1 1 55%",
+          background: "#fff",
+          padding: "2rem",
+          borderRadius: "12px",
+          boxShadow: "0 6px 15px rgba(0,0,0,0.08)",
+        }}
+      >
+        <h3
+          style={{
+            marginBottom: "1.5rem",
+            color: "#7e5e8f",
+            fontSize: "1.5rem",
+            fontWeight: "600",
+            textAlign: "center",
+          }}
+        >
+          Send Me an Email
+        </h3>
+
         {submitted ? (
-          <p style={{ textAlign: 'center', fontSize: '1.2rem', color: '#b497bd' }}>
+          <p
+            style={{
+              textAlign: "center",
+              fontSize: "1.2rem",
+              color: "#b497bd",
+            }}
+          >
             Thanks for reaching out! I will get back to you soon.
           </p>
-        ) : (
-          <>
-            {error && (
-              <p style={{ color: 'red', textAlign: 'center', marginBottom: '1rem' }}>{error}</p>
-            )}
-            <form onSubmit={handleSubmit} className="contact-form" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="contact-input"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="contact-input"
-              />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows="5"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="contact-textarea"
-              />
-              <motion.button
-                type="submit"
-                className="btn hero-btn"
-                whileHover={{ scale: 1.05, boxShadow: '0 0 10px #b497bd' }}
-                whileTap={{ scale: 0.95 }}
-                style={{ alignSelf: 'center', padding: '0.85rem 3rem' }}
+          ) : (
+            <>
+              {error && (
+                <p
+                  style={{
+                    color: "red",
+                    textAlign: "center",
+                    marginBottom: "1rem",
+                  }}
+                >
+                  {error}
+                </p>
+              )}
+              <form
+                onSubmit={handleSubmit}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "1.2rem",
+                }}
               >
-                Send Message
-              </motion.button>
-            </form>
-          </>
-        )}
-      </motion.div>
-
-      <motion.div
-        className="social-icons"
-        style={{ marginTop: '3rem', textAlign: 'center', fontSize: '1.8rem', color: '#7e5e8f', display: 'flex', justifyContent: 'center', gap: '2rem' }}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7, delay: 0.5 }}
-      >
-        <a href="https://www.linkedin.com/in/favour-gilian-8084b3336/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="social-link">
-          <FaLinkedin />
-        </a>
-        <a href="https://github.com/gilianfavour" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="social-link">
-          <FaGithub />
-        </a>
-        <a href="https://x.com/favour22551" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="social-link">
-          <FaTwitter />
-        </a>
-        <a href="mailto:gilianfavour06@gmail.com" target='_blank' rel="noopener noreferrer" aria-label="Email" className="social-link">
-          <FaEnvelope />
-        </a>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  style={{
+                    padding: "0.8rem",
+                    borderRadius: "8px",
+                    border: "1px solid #ddd",
+                    outline: "none",
+                  }}
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  style={{
+                    padding: "0.8rem",
+                    borderRadius: "8px",
+                    border: "1px solid #ddd",
+                    outline: "none",
+                  }}
+                />
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  rows="5"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  style={{
+                    padding: "0.8rem",
+                    borderRadius: "8px",
+                    border: "1px solid #ddd",
+                    outline: "none",
+                  }}
+                />
+                <motion.button
+                  type="submit"
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 0 12px #b497bd",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  style={{
+                    alignSelf: "center",
+                    padding: "0.85rem 3rem",
+                    border: "none",
+                    borderRadius: "30px",
+                    background: "#7e5e8f",
+                    color: "#fff",
+                    fontWeight: "600",
+                    cursor: "pointer",
+                  }}
+                >
+                  Send Message
+                </motion.button>
+              </form>
+            </>
+          )}
+        </div>
       </motion.div>
     </section>
   );

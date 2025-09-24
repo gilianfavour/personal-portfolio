@@ -11,7 +11,7 @@ const projects = [
     title: 'Portfolio Website',
     description: 'A modern portfolio website showcasing my skills and projects.',
     image: portfolio,
-    url: 'https://github.com/gilianfavour/personal-portfolio.git',
+    url: 'https://personal-portfolio-six-khaki.vercel.app/#projects',
     techStack: ['React', 'Bootstrap', 'CSS', 'HTML'],
   },
   {
