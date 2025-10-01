@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import option3Image from '../Assets/option3.jpg'
+import myprofphotoImage from '../Assets/myprofphoto.png'
 
 
 function Hero() {
@@ -74,7 +75,7 @@ function Hero() {
         style={{ position: 'relative', display: 'inline-block' }}
       >
         <motion.img
-          src={option3Image}
+          src={myprofphotoImage}
           alt="Favour Gilian"
           className="hero-image"
           animate={{
