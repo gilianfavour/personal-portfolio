@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import option3Image from '../Assets/option3.jpg'
-import myprofphotoImage from '../Assets/myprofphoto.png'
+import myprofphotoImage from '../Assets/myprofphoto.png';
 
 
 function Hero() {

@@ -99,10 +99,10 @@ function Contact() {
             <FaEnvelope color="#b497bd" /> gilianfavour06@gmail.com
           </p>
           <p style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <FaPhoneAlt color="#b497bd" /> +256 780488850
+            <FaPhoneAlt color="#b497bd" /> +256 780488850 / +256748588302
           </p>
           <p style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <FaMapMarkerAlt color="#b497bd" /> Arua, Uganda
+            <FaMapMarkerAlt color="#b497bd" /> Kampala, Uganda
           </p>
 
           <div

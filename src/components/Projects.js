@@ -4,6 +4,7 @@ import Barolls from '../Assets/barolls.PNG';
 import portfolio from '../Assets/portfolio.PNG';
 import API from '../Assets/api.PNG';
 import Book from '../Assets/bookmgt.PNG';
+import WNETF from '../Assets/WNETF.png';
 
 const projects = [
   {
@@ -24,15 +25,22 @@ const projects = [
   },
   {
     id: 3,
+    title: 'WestNile Education Trust Fund',
+    description: 'A fully functional website using the framework "Next.js". That helps to publicise them and as well attract donors and help students appy for the loan.',
+    image: WNETF,
+    url: 'https://wnetf.com/',
+    techStack: ['Next.Js','Flask(Python)', 'MySQL', 'Postman', 'Xammp'],
+  },
+  {
+    id: 4,
     title: 'Authors API',
     description: 'A Authors backend to track there daily activites.',
     image: API,
     url: 'https://github.com/gilianfavour/Flask_Author_API.git',
     techStack: ['Flask(Python)', 'MySQL', 'Postman', 'Xammp'],
   },
-  ,
   {
-    id: 4,
+    id: 5,
     title: 'Book Management System',
     description: 'A Book management System to keep your personal books organized.(Collaborated using git hub)',
     image: Book,

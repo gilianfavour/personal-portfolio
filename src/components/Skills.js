@@ -12,7 +12,9 @@ import {
   SiPython, 
   SiGit, 
   SiMysql, 
-  SiAdobephotoshop 
+  SiAdobephotoshop,
+  SiNextdotjs,
+  SiFlutter,
 } from 'react-icons/si';
 
 const skills = [
@@ -20,7 +22,9 @@ const skills = [
   { name: 'CSS', level: 85, icon: <SiCss3 color="#2965f1" size={28} /> },
   { name: 'Bootstrap', level: 80, icon: <SiBootstrap color="#7952b3" size={28} /> },
   { name: 'JavaScript', level: 80, icon: <SiJavascript color="#f0db4f" size={28} /> },
-  { name: 'React', level: 75, icon: <SiReact color="#61dafb" size={28} /> },
+  { name: 'React.js', level: 75, icon: <SiReact color="#61dafb" size={28} /> },
+  { name: 'Next.js', level: 75, icon: <SiNextdotjs color="#044658ff" size={28} /> },
+  { name: 'Flutter', level: 55, icon: <SiFlutter color="#61dafb" size={28} /> },
   { name: 'Node.js', level: 75, icon: <SiNodedotjs color="#3c873a" size={28} /> },
   { name: 'Python', level: 75, icon: <SiPython color="#306998" size={28} /> },
   { name: 'Git & GitHub', level: 85, icon: <SiGit color="#171515" size={28} /> },

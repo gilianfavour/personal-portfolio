@@ -41,7 +41,7 @@ function About() {
             Hi! I'm Favour Gilian, a Year 2 Computer Science student at Women's Institute Of Technology Uganda (WITU). I’m passionate about programming and love exploring how technology can solve real-world problems.
           </p>
           <p>
-            Currently, I’m learning foundational computer science topics including programming languages like Python and JavaScript, web development with React, Graphics, Fundamentals of Computer Hardware, and problem-solving through algorithms and data structures.
+            Currently, I’m learning foundational computer science topics including programming languages like Python and JavaScript, web development with React, Graphics, Fundamentals of Computer Hardware, app development using Flutter, and problem-solving through algorithms and data structures.
           </p>
           <p>
             Beyond academics, I enjoy building small projects that challenge me creatively and technically. I am fascinated by UI/UX design and how it shapes great user experiences.
