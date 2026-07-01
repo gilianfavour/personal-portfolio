@@ -1,12 +1,48 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import AboutImage from '../Assets/about.jpg'
+import { MdOutlineWeb, MdOutlineSettingsEthernet, MdOutlinePhoneAndroid, MdOutlineSatelliteAlt } from 'react-icons/md';
+import { TbBrain } from 'react-icons/tb';
+import { IoColorPaletteOutline } from 'react-icons/io5';
+import AboutImage from '../Assets/new_about.png';
+
+const services = [
+  {
+    icon: MdOutlineWeb,
+    title: 'Web Development',
+    desc: 'Modern websites and web applications using React, Next.js, Laravel and Django.',
+  },
+  {
+    icon: MdOutlineSettingsEthernet,
+    title: 'Backend Development',
+    desc: 'REST APIs, authentication, databases, business logic and integrations.',
+  },
+  {
+    icon: MdOutlinePhoneAndroid,
+    title: 'Mobile Development',
+    desc: 'Flutter cross-platform mobile applications for Android and iOS.',
+  },
+  {
+    icon: TbBrain,
+    title: 'AI Integration',
+    desc: 'Chatbots, voice assistants, OpenAI integrations, document intelligence and language translation.',
+  },
+  {
+    icon: IoColorPaletteOutline,
+    title: 'UI/UX Design',
+    desc: 'Figma designs, responsive layouts, dashboard design and user research.',
+  },
+  {
+    icon: MdOutlineSatelliteAlt,
+    title: 'USSD / 2G Solutions',
+    desc: 'Offline-first applications accessible to users on feature phones with no internet.',
+  },
+];
 
 function About() {
   return (
     <section id="about" className="about-section">
 
-        {/* Top inverted wave divider */}
+      {/* Top inverted wave divider */}
       <motion.div
         className="about-divider"
         initial={{ opacity: 0, y: -20 }}
@@ -18,7 +54,7 @@ function About() {
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
           className="wave-svg"
-          style={{ transform: 'rotate(180deg)' }} // flip vertically
+          style={{ transform: 'rotate(180deg)' }}
         >
           <path
             fill="#b497bd"
@@ -28,6 +64,7 @@ function About() {
         </svg>
       </motion.div>
 
+      {/* About content */}
       <div className="container about-container">
         <motion.div
           className="about-text"
@@ -38,17 +75,34 @@ function About() {
         >
           <h2 className="section-title">About Me</h2>
           <p>
-            Hi! I'm Favour Gilian, a Year 2 Computer Science student at Women's Institute Of Technology Uganda (WITU). I’m passionate about programming and love exploring how technology can solve real-world problems.
+            I'm a Full Stack Software Developer based in Uganda with experience building modern web
+            applications, mobile apps, AI-powered systems and enterprise management platforms.
           </p>
           <p>
-            Currently, I’m learning foundational computer science topics including programming languages like Python and JavaScript, web development with React, Graphics, Fundamentals of Computer Hardware, app development using Flutter, and problem-solving through algorithms and data structures.
+            Over the past few years I've worked with <strong>Laravel, Django, Flutter, React, Next.js</strong> and
+            modern cloud technologies to develop solutions in agriculture, SACCO management,
+            renewable energy, education and nonprofit organizations.
           </p>
           <p>
-            Beyond academics, I enjoy building small projects that challenge me creatively and technically. I am fascinated by UI/UX design and how it shapes great user experiences.
+            My passion lies in solving African problems using practical technology that works for
+            everyone — including users without smartphones. I believe the best software is the kind
+            that actually reaches people.
           </p>
-          <p>
-            My goal is to develop skills that allow me to create impactful software solutions and contribute meaningfully to the tech community.
-          </p>
+
+          <div className="about-stats">
+            <div className="stat-item">
+              <span className="stat-number">10+</span>
+              <span className="stat-label">Projects Built</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">6+</span>
+              <span className="stat-label">Technologies</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">3+</span>
+              <span className="stat-label">Real Clients</span>
+            </div>
+          </div>
         </motion.div>
 
         <motion.div
@@ -58,15 +112,42 @@ function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <img
-            src={AboutImage} 
-            alt="Favour Gilian"
-            className="about-image"
-          />
+          <img src={AboutImage} alt="Favour Gilian" className="about-image" />
         </motion.div>
       </div>
 
-      
+      {/* What I Do section */}
+      <div className="services-section container">
+        <motion.h3
+          className="services-title"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          What I Do
+        </motion.h3>
+        <div className="services-grid">
+          {services.map((s, i) => (
+            <motion.div
+              key={s.title}
+              className="service-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              whileHover={{ y: -6, boxShadow: '0 12px 30px rgba(180,151,189,0.3)' }}
+            >
+              <div className="service-icon">
+                <s.icon size={28} color="#b497bd" />
+              </div>
+              <h4 className="service-title">{s.title}</h4>
+              <p className="service-desc">{s.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
     </section>
   );
 }

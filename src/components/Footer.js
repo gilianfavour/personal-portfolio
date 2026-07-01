@@ -1,73 +1,77 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaWhatsapp, FaHeart } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <footer style={{ backgroundColor: '#604d66', color: 'white', padding: '3rem 6vw', marginTop: '4rem' }}>
+    <footer className="site-footer">
       <Container>
         <Row className="gy-4">
-          {/* Column 1 */}
-          <Col md={3}>
-            <h3 style={{ fontWeight: 'bold' }}>Favour Gilian</h3>
-            <p style={{ fontStyle: 'italic', maxWidth: '250px' }}>
-              Crafting beautiful, functional web experiences.
+          {/* Brand */}
+          <Col md={4}>
+            <h3 className="footer-brand">
+              Favour<span className="footer-accent">.</span>
+            </h3>
+            <p className="footer-tagline">
+              Building scalable web, mobile and AI-powered solutions that solve real-world problems.
             </p>
-            <div style={{ fontSize: '1.5rem', marginTop: '1rem' }}>
-              <a href="https://www.linkedin.com/in/favour-gilian-8084b3336/" target="_blank" rel="noopener noreferrer" style={{ color: 'white', marginRight: '1rem' }}>
+            <div className="footer-socials">
+              <a href="https://www.linkedin.com/in/favour-gilian-8084b3336/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <FaLinkedin />
               </a>
-              <a href="https://github.com/gilianfavour" target="_blank" rel="noopener noreferrer" style={{ color: 'white', marginRight: '1rem' }}>
+              <a href="https://github.com/gilianfavour" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <FaGithub />
               </a>
-              <a href="https://x.com/favour22551" target="_blank" rel="noopener noreferrer" style={{ color: 'white', marginRight: '1rem' }}>
+              <a href="https://x.com/favour22551" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <FaTwitter />
               </a>
-              <a href="mailto:gilianfavour06@gmail.com" style={{ color: 'white' }}>
+              <a href="https://wa.me/256780488850" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <FaWhatsapp />
+              </a>
+              <a href="mailto:gilianfavour06@gmail.com" aria-label="Email">
                 <FaEnvelope />
               </a>
             </div>
           </Col>
 
-          {/* Column 2 */}
-          <Col md={3}>
-            <h5>Main Pages</h5>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li><a href="#hero" style={{ color: 'white', textDecoration: 'none' }}>Home</a></li>
-              <li><a href="#about" style={{ color: 'white', textDecoration: 'none' }}>About</a></li>
-              <li><a href="#projects" style={{ color: 'white', textDecoration: 'none' }}>Projects</a></li>
-              <li><a href="#skills" style={{ color: 'white', textDecoration: 'none' }}>Skills</a></li>
-              <li><a href="#contact" style={{ color: 'white', textDecoration: 'none' }}>Contact</a></li>
+          {/* Navigation */}
+          <Col md={2}>
+            <h5 className="footer-heading">Navigate</h5>
+            <ul className="footer-links">
+              {['hero', 'about', 'experience', 'projects', 'skills', 'contact'].map((s) => (
+                <li key={s}>
+                  <a href={`#${s}`}>{s.charAt(0).toUpperCase() + s.slice(1)}</a>
+                </li>
+              ))}
             </ul>
           </Col>
 
-          {/* Column 3 */}
+          {/* Tech Stack */}
           <Col md={3}>
-            <h5>Utility Pages</h5>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li><a href="/privacy-policy" style={{ color: 'white', textDecoration: 'none' }}>Privacy Policy</a></li>
-              <li><a href="/terms" style={{ color: 'white', textDecoration: 'none' }}>Terms of Service</a></li>
-              <li><a href="/faq" style={{ color: 'white', textDecoration: 'none' }}>FAQ</a></li>
-              <li><a href="/support" style={{ color: 'white', textDecoration: 'none' }}>Support</a></li>
-            </ul>
-          </Col>
-
-          {/* Column 4 - 2x2 Image grid
-          <Col md={3}>
-            <h5>Gallery</h5>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginTop: '1rem' }}>
-              <img src="/gallery1.jpg" alt="Gallery 1" style={{ width: '100%', borderRadius: '8px', objectFit: 'cover' }} />
-              <img src="/gallery2.jpg" alt="Gallery 2" style={{ width: '100%', borderRadius: '8px', objectFit: 'cover' }} />
-              <img src="/gallery3.jpg" alt="Gallery 3" style={{ width: '100%', borderRadius: '8px', objectFit: 'cover' }} />
-              <img src="/gallery4.jpg" alt="Gallery 4" style={{ width: '100%', borderRadius: '8px', objectFit: 'cover' }} />
+            <h5 className="footer-heading">Tech Stack</h5>
+            <div className="footer-tech">
+              {['React', 'Next.js', 'Django', 'Laravel', 'Flutter', 'OpenAI', 'PostgreSQL', 'Figma'].map((t) => (
+                <span key={t} className="footer-tech-badge">{t}</span>
+              ))}
             </div>
-          </Col> */}
+          </Col>
+
+          {/* Currently building */}
+          <Col md={3}>
+            <h5 className="footer-heading">Currently Building</h5>
+            <div className="footer-building">
+              <span className="building-dot"></span>
+              <p>
+                <strong>Farmer's Companion</strong> — an AI-powered multilingual farming assistant for African smallholder farmers using USSD, voice and smartphones.
+              </p>
+            </div>
+          </Col>
         </Row>
 
-        <hr style={{ borderColor: 'rgba(255, 255, 255, 0.3)', margin: '2rem 0' }} />
+        <hr className="footer-divider" />
 
-        <p style={{ textAlign: 'center', fontSize: '0.9rem', marginBottom: 0 }}>
-          &copy; {new Date().getFullYear()} Favour Gilian. All rights reserved.
+        <p className="footer-copy">
+          &copy; {new Date().getFullYear()} Favour Gilian. All rights reserved. Built with React &amp; <FaHeart size={12} style={{ color: '#b497bd', verticalAlign: 'middle', margin: '0 2px' }} />
         </p>
       </Container>
     </footer>
