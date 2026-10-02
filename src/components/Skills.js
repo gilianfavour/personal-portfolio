@@ -10,6 +10,7 @@ import {
   SiGit, SiGithub, SiDocker, SiPostman, SiFigma,
   SiOpenai,
 } from 'react-icons/si';
+import { FaCogs, FaLayerGroup } from 'react-icons/fa';
 
 const skillGroups = [
   {
@@ -34,9 +35,12 @@ const skillGroups = [
     ],
   },
   {
-    label: 'Backend',
+    label: 'Backend & Frameworks',
     skills: [
+      { name: 'Frappe Framework', icon: <FaLayerGroup color="#0089ff" size={30} /> },
+      { name: 'ERPNext', icon: <FaCogs color="#5e64ff" size={30} /> },
       { name: 'Laravel', icon: <SiLaravel color="#ff2d20" size={30} /> },
+      { name: 'Filament PHP', icon: <SiLaravel color="#f59e0b" size={30} /> },
       { name: 'Django', icon: <SiDjango color="#092e20" size={30} /> },
       { name: 'Django REST', icon: <SiDjango color="#44b78b" size={30} /> },
       { name: 'Node.js', icon: <SiNodedotjs color="#3c873a" size={30} /> },

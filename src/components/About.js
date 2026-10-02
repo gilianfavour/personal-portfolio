@@ -1,11 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MdOutlineWeb, MdOutlineSettingsEthernet, MdOutlinePhoneAndroid, MdOutlineSatelliteAlt } from 'react-icons/md';
+import { MdOutlineWeb, MdOutlineSettingsEthernet, MdOutlinePhoneAndroid, MdOutlineSatelliteAlt, MdOutlineBusinessCenter } from 'react-icons/md';
 import { TbBrain } from 'react-icons/tb';
-import { IoColorPaletteOutline } from 'react-icons/io5';
 import AboutImage from '../Assets/new_about.png';
 
 const services = [
+  {
+    icon: MdOutlinePhoneAndroid,
+    title: 'Mobile Development',
+    desc: 'Hands-on cross-platform mobile application development and maintenance using Flutter for Android and iOS.',
+  },
+  {
+    icon: MdOutlineBusinessCenter,
+    title: 'ERPNext & Frappe Systems',
+    desc: 'Custom Frappe apps, DocTypes, Python server scripts, workflows, module customization, and REST API integrations.',
+  },
   {
     icon: MdOutlineWeb,
     title: 'Web Development',
@@ -17,19 +26,9 @@ const services = [
     desc: 'REST APIs, authentication, databases, business logic and integrations.',
   },
   {
-    icon: MdOutlinePhoneAndroid,
-    title: 'Mobile Development',
-    desc: 'Flutter cross-platform mobile applications for Android and iOS.',
-  },
-  {
     icon: TbBrain,
     title: 'AI Integration',
     desc: 'Chatbots, voice assistants, OpenAI integrations, document intelligence and language translation.',
-  },
-  {
-    icon: IoColorPaletteOutline,
-    title: 'UI/UX Design',
-    desc: 'Figma designs, responsive layouts, dashboard design and user research.',
   },
   {
     icon: MdOutlineSatelliteAlt,
@@ -75,18 +74,14 @@ function About() {
         >
           <h2 className="section-title">About Me</h2>
           <p>
-            I'm a Full Stack Software Developer based in Uganda with experience building modern web
-            applications, mobile apps, AI-powered systems and enterprise management platforms.
+            I'm a Full Stack Software Developer based in Uganda with hands-on experience building modern web
+            applications, mobile apps, AI-powered systems and enterprise ERP management platforms.
           </p>
           <p>
-            Over the past few years I've worked with <strong>Laravel, Django, Flutter, React, Next.js</strong> and
-            modern cloud technologies to develop solutions in agriculture, SACCO management,
-            renewable energy, education and nonprofit organizations.
+            Working at <strong>TECHWISE SOLUTIONS</strong> as a Junior Flutter Developer and ERP Specialist, I work hands-on in building and maintaining mobile applications and customizing enterprise platforms with <strong>ERPNext & Frappe</strong>, alongside <strong>Laravel, Django, React, and Next.js</strong>.
           </p>
           <p>
-            My passion lies in solving African problems using practical technology that works for
-            everyone — including users without smartphones. I believe the best software is the kind
-            that actually reaches people.
+            My passion lies in solving real-world business and societal challenges using practical technology — from enterprise-grade ERP workflows to lightweight USSD systems that reach users on feature phones.
           </p>
 
           <div className="about-stats">

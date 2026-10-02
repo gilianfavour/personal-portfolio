@@ -5,9 +5,40 @@ import { MdFiberManualRecord } from 'react-icons/md';
 const experiences = [
   {
     id: 1,
+    role: "Full Stack Software Engineer",
+    company: "Kendall Kitchen (Official Platform)",
+    period: "2026",
+    type: "Client's Project",
+    points: [
+      "Architected and built a decoupled full-stack online food ordering, corporate feeding subscription, and catering reservation system",
+      "Engineered responsive customer frontend using Next.js, TypeScript, React, and Tailwind CSS with real-time menu browsing and checkout",
+      "Developed a robust Laravel REST API backend with Sanctum authentication, Spatie permissions, and custom business logic",
+      "Integrated Filament v5 administrative management dashboard for real-time inventory tracking and automated daily financial reconciliation",
+    ],
+    tags: ["Next.js", "Laravel", "TypeScript", "Tailwind CSS", "Filament v5", "MySQL", "REST API"],
+    color: "#9b7daa",
+  },
+  {
+    id: 2,
+    role: "Junior Flutter Developer & ERPNext Engineer",
+    company: "TECHWISE SOLUTIONS",
+    period: "2026 – Present",
+    type: "Full-Time",
+    points: [
+      "Worked hands-on in building, feature expansion, and continuous maintenance of cross-platform Flutter mobile applications",
+      "Developed, customized, and maintained ERPNext & Frappe framework modules, building custom DocTypes, Python server scripts, workflows, and webhooks",
+      "Created custom Frappe REST APIs to seamlessly integrate ERPNext backend data with mobile apps and third-party systems",
+      "Collaborated closely with cross-functional teams to debug, optimize, and maintain live enterprise production software",
+    ],
+    tags: ["Flutter", "ERPNext", "Frappe", "Dart", "Python", "REST API", "MySQL"],
+    color: "#7e5e8f",
+    current: true,
+  },
+  {
+    id: 3,
     role: "Backend Developer",
     company: "WNETF (WestNile Education Trust Fund)",
-    period: "2024",
+    period: "2025",
     type: "Contract",
     points: [
       "Built 20+ Django REST API endpoints for beneficiary management and reporting",
@@ -19,7 +50,7 @@ const experiences = [
     color: "#b497bd",
   },
   {
-    id: 2,
+    id: 4,
     role: "Full Stack Developer",
     company: "SACCO Management System",
     period: "2024",
@@ -34,10 +65,10 @@ const experiences = [
     color: "#9b7daa",
   },
   {
-    id: 3,
+    id: 5,
     role: "Founder & Software Engineer",
     company: "Farmer's Companion",
-    period: "2024 – Present",
+    period: "2026 – Present",
     type: "Personal Project",
     points: [
       "Designing an AI-powered multilingual farming assistant for African smallholder farmers",
@@ -50,10 +81,10 @@ const experiences = [
     current: true,
   },
   {
-    id: 4,
+    id: 6,
     role: "UI/UX Designer & Frontend Developer",
     company: "PRESTO",
-    period: "2024",
+    period: "2026",
     type: "Contract",
     points: [
       "Designed landing pages, product pages and admin dashboards in Figma",
@@ -64,7 +95,7 @@ const experiences = [
     color: "#c4a5d0",
   },
   {
-    id: 5,
+    id: 7,
     role: "Full Stack Developer",
     company: "Barolls Arua Limited",
     period: "2023",

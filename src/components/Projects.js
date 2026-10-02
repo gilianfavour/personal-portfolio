@@ -7,10 +7,40 @@ import WNETF from '../Assets/WNETF.png';
 import FarmersCompanion from '../Assets/farmers-companion.jpg';
 import Agora from '../Assets/agora.jpeg';
 import Presto from '../Assets/presto.jpeg';
+import ApiImage from '../Assets/api.PNG';
+import KendallKitchen from '../Assets/kendall-kitchen.jpg';
 
 const projects = [
   {
     id: 1,
+    title: "Kendall Kitchen",
+    description:
+      "Full-stack food ordering platform, corporate employee feeding portal, catering reservation system, and kitchen administrative management platform built with Next.js, Laravel REST API, and Filament v5.",
+    problem: "Kendall Kitchen faced operational bottlenecks due to manual phone/walk-in orders, corporate meal tracking overhead, and tedious end-of-day financial reconciliation.",
+    solution: "Architected a decoupled client-server web app using Next.js (TypeScript, Tailwind CSS) for customer ordering, powered by a Laravel REST API backend with Filament v5 admin dashboard for real-time stock control and financial reconciliation.",
+    outcome: "Modernized kitchen operations with seamless online menu ordering, automated corporate feeding session tracking, and real-time administrative reconciliation. Live at kendallkitchen.com.",
+    image: KendallKitchen,
+    url: 'https://kendallkitchen.com/',
+    techStack: ['Next.js', 'Laravel', 'TypeScript', 'Tailwind CSS', 'Filament v5', 'MySQL', 'REST API'],
+    tags: ['Web', 'Backend', 'UI/UX'],
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "TechWise Enterprise ERP & Mobile Apps",
+    description:
+      "Enterprise management systems and mobile applications built and maintained at TechWise Solutions. Includes ERPNext custom Frappe apps, DocTypes, Python server scripts, workflows, and cross-platform Flutter mobile app development.",
+    problem: 'Businesses needed customized enterprise resource planning workflows, custom data fields, and real-time mobile app access for field staff and management.',
+    solution: 'Engineered custom Frappe framework apps and server scripts, exposed secure REST API endpoints, and built/maintained responsive Flutter mobile applications.',
+    outcome: 'Streamlined client operations, automated business reporting, and enabled seamless mobile synchronization with ERP backends.',
+    image: ApiImage,
+    url: '#',
+    techStack: ['ERPNext', 'Frappe', 'Flutter', 'Python', 'Dart', 'MySQL', 'REST API'],
+    tags: ['Mobile', 'Backend', 'ERP & Enterprise'],
+    featured: true,
+  },
+  {
+    id: 3,
     title: "Farmer's Companion",
     description:
       "An AI-powered multilingual farming assistant that works through smartphones, voice and USSD. Helps smallholder farmers access localized agricultural advice, weather, pest diagnosis and market prices — even without a smartphone.",
@@ -24,7 +54,7 @@ const projects = [
     featured: true,
   },
   {
-    id: 2,
+    id: 4,
     title: 'SACCO Management System',
     description:
       'A full-stack SACCO management platform with a Laravel backend and Flutter mobile app. Manages member registration, loan applications, savings tracking, reporting and admin dashboards.',
@@ -38,7 +68,7 @@ const projects = [
     featured: true,
   },
   {
-    id: 3,
+    id: 5,
     title: 'WNETF Management System',
     description:
       'A Django-powered beneficiary management system for WestNile Education Trust Fund. Manages over 5,000 beneficiary records with role-based access control, document uploads and REST API integrations.',
@@ -52,7 +82,7 @@ const projects = [
     featured: true,
   },
   {
-    id: 4,
+    id: 6,
     title: 'Barolls Restaurant Website',
     description:
       'A fully functional fast food website for Barolls Arua Limited with online ordering, delivery integration and an admin panel. Built with React frontend and Python Flask backend.',
@@ -66,7 +96,7 @@ const projects = [
     featured: false,
   },
   {
-    id: 5,
+    id: 7,
     title: 'PRESTO Corporate Website',
     description:
       'UI/UX design and development of a modern corporate website. Designed landing pages, product pages, admin dashboard mockups and customer-facing responsive layouts using Figma.',
@@ -80,7 +110,7 @@ const projects = [
     featured: false,
   },
   {
-    id: 6,
+    id: 8,
     title: 'Portfolio Website',
     description:
       'This portfolio — showcasing skills, projects and experience with smooth Framer Motion animations, skill badges and project case studies.',
@@ -95,7 +125,7 @@ const projects = [
   },
 ];
 
-const allTags = ['All', 'Web', 'Mobile', 'Backend', 'AI', 'UI/UX', 'USSD'];
+const allTags = ['All', 'Mobile', 'ERP & Enterprise', 'Backend', 'Web', 'AI', 'UI/UX', 'USSD'];
 
 function Projects() {
   const [activeTag, setActiveTag] = useState('All');

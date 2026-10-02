@@ -50,7 +50,7 @@ function Footer() {
           <Col md={3}>
             <h5 className="footer-heading">Tech Stack</h5>
             <div className="footer-tech">
-              {['React', 'Next.js', 'Django', 'Laravel', 'Flutter', 'OpenAI', 'PostgreSQL', 'Figma'].map((t) => (
+              {['Flutter', 'ERPNext', 'Frappe', 'React', 'Next.js', 'Django', 'Laravel', 'OpenAI', 'MySQL', 'PostgreSQL'].map((t) => (
                 <span key={t} className="footer-tech-badge">{t}</span>
               ))}
             </div>
